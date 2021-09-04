@@ -1,0 +1,119 @@
+  <div class="Jumbotron border bg-light container d-grid gap-3">
+
+   <div class="container mt-4 mb-4" >
+    <div class="row border mb-3">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="assets/images/img1.jpg"  name class="card-img-top" alt="...">
+          <div class="card-block card-footer text-center">
+            <button type="button" name ="img1.jpg" class="btn btn-primary btn-lg btn-block" (click)="tagme($event)">Tag Me</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="assets/images/img2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" name ="img2.jpg" class="btn btn-primary btn-lg btn-block" (click)="tagme($event)">Tag Me</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="assets/images/img3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" name ="img3.jpg" class="btn btn-primary btn-lg btn-block" (click)="tagme($event)">Tag Me</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="assets/images/img4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" name ="img4.jpg" class="btn btn-primary btn-lg btn-block" (click)="tagme($event)">Tag Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row border">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="assets/images/img5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button type="button" name ="img5.jpg" class="btn btn-primary btn-lg btn-block" (click)="tagme($event)">Tag Me</button>
+          </div>
+      </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div [ngStyle]="{'visibility':isDivVisible ? 'visible' : 'hidden'}" class="card">
+          <div class="card-img-top" >
+            <img [src]="step1transform()" class="card-img-top" alt="...">
+        </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div [ngStyle]="{'visibility':isDivVisible ? 'visible' : 'hidden'}" class="card">
+          <ul class="list-group">
+
+            <li class="list-group-item">car_name : {{step1ImgResponse.car_name}}</li>
+            <li class="list-group-item">file_name : {{step1ImgResponse.file_name}}</li>
+            <li class="list-group-item">class_id : {{step1ImgResponse.class_id}}</li>
+            <li class="list-group-item">img_ht : {{step1ImgResponse.img_ht}}</li>
+            <li class="list-group-item"> img_wt : {{step1ImgResponse.img_wt}}</li>
+            <li class="list-group-item"> bbox_coordinates : {{step1ImgResponse.bbox_coordinates}}</li>
+
+          </ul>
+        </div>
+      </div>
+
+
+     </div>
+
+
+      <div class="card container mt-4 mb-4">
+        <div class="form-row mt-3 form-group">
+          <div class="col">
+            <input
+            class="file border"
+            type="file"
+            name="file"
+            #fileInput
+            (change)="onChange(fileInput.files[0])"/>
+            </div>
+            <div class="col">
+
+            <select class="form-select" [(ngModel)]="selectedgroup" >
+              <option selected value="model1">Car Detector Model 1</option>
+              <option value="model2"> Car Detector Model 2</option>
+            </select>
+            </div>
+            <div class="col">
+              <button class="button" (click)="onUpload()">Upload</button>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-img-top" >
+              <img [src]="imageUrl" class="card-img-top" alt="...">
+          </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3" [ngStyle]="{'visibility':isstep2Processdone ? 'visible' : 'hidden'}">
+          <div class="card">
+
+            <div class="card-img-top" >
+              <img class="card-img-top" [src]="tranform()"/>
+          </div>
+          <div class="card-footer">
+            <span class="label text-primary text-center">{{responseImg.car_name}}</span>
+          </div>
+          </div>
+        </div>
+      </div>
+ </div>
