@@ -1,0 +1,6 @@
+﻿image,file_name,car_name,class_id,img_ht,img_wt,bbox_coordinates
+img1.jpg,00082.jpg,Volkswagen Beetle Hatchback 2012,191,480,640,"63, 113, 534, 300"
+img2.jpg,00123.jpg,Jaguar XK XKR 2012,143,1575,2100,"151, 568, 1803, 703"
+img3.jpg,06069.jpg,Land Rover Range Rover SUV 2012,153,492,786,"162, 101, 479, 334"
+img4.jpg,07239.jpg,Ford GT Coupe 2006,111,1024,1280,"324, 334, 791, 438"
+img5.jpg,08130.jpg,Bugatti Veyron 16.4 Coupe 2009,45,450,600,"46, 31, 526, 386"
